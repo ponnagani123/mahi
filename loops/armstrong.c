@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
 	int num;
@@ -15,12 +16,7 @@ int main()
 	while(temp2!=0)
 	{
 	 	int rem=temp2%10;
-		int power=1;
-		for(int i=1;i<=3;i++)
-		{
-		   power*=rem;
-		}
-		sum+=power;
+		sum+=(int)pow(rem,count);
 		temp2/=10;
 	}
 	if(sum==num)
